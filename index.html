@@ -13,26 +13,39 @@
     <meta property="og:description" content="釣りとゲーム好きのおっさんです。ドラガー41鯖でやってます。未経験からAWS、HTML/CSS,JavaScript,PHP学習中">
     <meta property="og:image" content="https://shinno3916.github.io/shinta_HTML-CSS/images/image3.jpg">
     <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- slickの読み込み -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
 </head>
 <body>
     <header class="flex-box">
         <h1 class="main-title">MyPortFolio</h1>
         <nav>
-            <ul class="main-nav">
-                <li><a href="#profile">PROFILE</a></li>
-                <li><a href="#hobby">HOBBY</a></li>
+            <ul id="page_link" class="main-nav">
+                <li><a class="nav_animation" href="#profile">PROFILE</a></li>
+                <li><a class="nav_animation" href="#hobby">HOBBY</a></li>
             </ul>
         </nav>       
     </header>
     <main>
         <article>
-            <section>
-                <div class="image-size1">
-                    <img src="images/image1.jpg" alt="車載している釣り竿"/>
+            <!-- カルーセル -->
+            <section class="">
+                <div class="carousel">
+                    <div>
+                        <img class="carouselImg" src="images/image1.jpg">
+                    </div>
+                    <div>
+                        <img class="carouselImg" src="images/imagecarousel2.jpg">
+                    </div>
+                    <div>
+                        <img class="carouselImg" src="images/imagecarousel3.jpg">
+                    </div>
                 </div>
             </section>
-            <section>
+            <section class="fadeup-profile">
                 <h2 id="profile">PROFILE</h2>
                 <div class="flex-box2">
                     <div class="image-size2">
@@ -49,22 +62,22 @@
                     </div>
                 </div>
             </section>
-            <section>
+            <section class="fadeup-hobby">
                 <h2 id="hobby">HOBBY</h2>
-                    <div class="flex-box3">
-                        <div class="image-size3">
-                            <img src="images/image3.jpg" alt="アオリイカ">
-                            <p class="p-font">初めて釣ったアオリイカ!</p>
-                        </div>
-                        <div class="image-size3">
-                            <img src="images/image4.jpg" alt="アオリイカの子供">
-                            <p class="p-font">秋の子イカは釣れやすい!</p>
-                        </div>
-                        <div class="image-size3">
-                            <img src="images/image5.jpg" alt="ゲームキャラ">
-                            <p class="p-font">私がやってるゲームのキャラです</p>
-                        </div>
+                <div class="flex-box3">
+                    <div class="image-size3 course-item">
+                        <a href=""><img src="images/image3.jpg" alt="アオリイカ"></a>
+                        <p>初めて釣ったアオリイカ!</p>
                     </div>
+                    <div class="image-size3 course-item">
+                        <a href=""><img src="images/image4.jpg" alt="アオリイカの子供"></a>
+                        <p>秋の子イカは釣れやすい!</p>
+                    </div>
+                    <div class="image-size3 course-item">
+                        <a href=""><img src="images/image5.jpg" alt="ゲームキャラ"></a>
+                        <p>私がやってるゲームのキャラです</p>
+                    </div>
+                </div>
             </section>
         </article>
         <footer>
@@ -78,5 +91,19 @@
             </div>
         </footer>
     </main>
+
+    <div id="page_top"><a class="top_button" href="#">TOP</a>
+    </div>
+    <!-- モーダル閉じるボタン -->
+    <div class="modal">
+        <img src="" alt="" class="bigimg">
+        <p class="close-btn"><a href=""></a>X</p>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+    <!-- slickの読み込み -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="js/script.js"></script>
 </body>
 </html>
